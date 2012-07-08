@@ -11,7 +11,7 @@
  * trust me, I tried it.
  * 
  * @author Ollie Read <me@ollieread.com>
- * @version 1.0
+ * @version 1.1
  */
 
 class OysterJourney {
@@ -136,7 +136,7 @@ class OysterJourney {
                         $data[$day]['date'] = $matches[0];
                     } elseif(preg_match("/(\d[\d\,\.]+) daily total/", $value, $matches) !== 0) {
                         $data[$day]['total'] = $matches[1];
-                    } elseif(preg_match("/(\d[\d\:]|\?\?\?\?+) - (\d[\d\:]+)/", $value, $matches) !== 0) {
+                    } elseif(preg_match("/([\d\:]*|\?\?\?\?+) - (\d[\d\:]+)/", $value, $matches) !== 0) {
                         $data[$day]['journeys'][$j]['time'] = array(
                             'start' => $matches[1],
                             'end'   => $matches[2]
