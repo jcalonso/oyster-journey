@@ -5,7 +5,8 @@ This class is a simple scraper class that allows for users of the TFL Oyster web
 
 I have a live example [here](http://ollieread.com/labs/oyster-journey/).
 
-`<?php
+```php
+<?php
 require_once 'OysterJourney.php';
 
 try {
@@ -23,4 +24,5 @@ try {
 } catch(Exception $e) {
     // you fucking idiot, you broke my code!
     echo $e->getMessage();
-}`
+}
+```
